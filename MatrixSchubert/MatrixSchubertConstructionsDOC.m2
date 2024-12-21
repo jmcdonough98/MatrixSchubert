@@ -90,8 +90,8 @@ doc ///
 	    The general method for creating a
 	    Schubert determinantal Ideal is @TO schubertDeterminantalIdeal@.
 	    The input is a permutation in the form of a list.
-	    This package contains functions for investigating the rank matrix,
-	    the Rothe diagram, and the essential cells of the Rothe diagram
+	    This package contains functions for investigating the rank matrix (@TO rankTable@),
+	    the Rothe diagram (@TO rotheDiagram@), and the essential cells (@TO essentialSet@) of the Rothe diagram
 	    as defined by Fulton in [Ful92].
 	Example
 	    p = {2,1,6,3,5,4};
@@ -104,23 +104,23 @@ doc ///
 	    In order to access a minimal generating set, use @TO trim@.
 	Example
 	    I = schubertDeterminantalIdeal p;
-	    # (I_*)
-	    # ((trim I)_*)
+	    numgens I
+	    numgens (trim I)
 	Text
 	    After creating a Schubert determinantal ideal, the permutation associated to it is stored in its cache table.
 	Example
 	    peek I.cache
 	Text
-	    This package also contains methods for investigating antidiagonal initial ideals
+	    This package also contains methods for investigating antidiagonal initial ideals (@TO antiDiagInit@)
 	    of Schubert determinantal ideals and their associated Stanley-Reisner complexes,
-	    which are a kind of subword complex. Subword complexes were introduced in [KM05] 
+	    which are a kind of subword complex (@TO subwordComplex@). Subword complexes were introduced in [KM05] 
 	    in the study of antidiagonal initial ideal of Schubert determinantal ideals
 	    and their relation to Schubert polynomials.
 	Example
 	    antiDiagInit p
 	    subwordComplex p
 	Text
-	    Given a list of permutations, this package also contains functions for intersecting and adding
+	    Given a list of permutations, this package also contains functions for intersecting (@TO schubertIntersect@) and adding (@TO schubertAdd@)
 	    the Schubert determinantal ideals associated to the list of permutations.
 	Example
 	    L = {{3,1,5,4,2},{2,5,3,4,1}} -- a list of 2 permutations
@@ -128,7 +128,7 @@ doc ///
 	    schubertIntersect L
 	Text
 	    Finally, this package contains functions for investigating homological invariants of matrix Schubert
-	    varieties efficiently through combinatorial algorithms produced in [PSW21].
+	    varieties efficiently through combinatorial algorithms produced in [PSW21] via @TO schubertRegularity, TO schubertCodim@.
 	Example
 	    time schubertRegularity p
 	    time regularity comodule I 
@@ -181,8 +181,8 @@ doc ///
 	    isPartialASM A
 	    A' = partialASMToASM A
 	Text
-	    This package contains functions for investigating the rank matrix,
-	    the Rothe diagram, and the essential cells of the Rothe diagram
+	    This package contains functions for investigating the rank matrix (@TO rankTable@),
+	    the Rothe diagram (@TO rotheDiagram@), and the essential cells (@TO essentialSet@) of the Rothe diagram
 	    of a partial ASM as defined by Fulton in [Ful92] and Weigandt in [Wei17].
 	Example
 	    rotheDiagram A
@@ -194,14 +194,14 @@ doc ///
 	    In order to access a minimal generating set, use @TO trim@.
 	Example
 	    I = schubertDeterminantalIdeal A;
-	    # (I_*)
-	    # ((trim I)_*)
+	    numgens I
+	    numgens (trim I)
 	Text
 	    After creating an ASM ideal, the corresponding ASM is stored in the cache table.
 	Example
 	    peek I.cache
 	Text
-	    This package also contains methods for investigating or using initial ideals of ASM ideals.
+	    This package also contains methods for investigating or using initial ideals of ASM ideals, for instance via @TO antiDiagInit@.
 	Example
 	    antiDiagInit A
 	Text
@@ -211,7 +211,7 @@ doc ///
 	Example
 	    schubertDecompose I
 	Text
-	    Given a list of partial ASMs, this package also contains functions for intersecting and adding
+	    Given a list of partial ASMs, this package also contains functions for intersecting (@TO schubertIntersect@) and adding (@TO schubertAdd@)
 	    the ASM ideals associated to the list of ASMs or partial ASMs. Every sum of ASM ideals (equivalently, 
 	    of ideals defined by partial ASMs) is again an ASM ideal.  The function @TO schubertAdd@ 
 	    automatically stores the ASM associated to this new ideal in its cache table.
@@ -232,7 +232,8 @@ doc ///
 	    isASMIdeal K'
 	    getASM K'
 	Text
-	    Additionally, this package facilitates the investigating homological invariants of ASM ideals
+	    Additionally, this package facilitates investigating homological invariants of ASM ideals
+	    such as regularity (@TO schubertRegularity@) and codimension (@TO schubertCodim@).
 	    efficiently by computing the associated invariants for their antidiagonal initial ideals,
 	    which are known to be squarefree by [Wei17]. Therefore the extremal Betti numbers
 	    (which encode regularity, depth, and projective dimension) of ASM ideals coincide 
@@ -343,7 +344,7 @@ doc ///
             ", arXiv preprint 1708.07236."}
             }@
 	Text
-	    Given a permutation or a partial ASM, one may compute its antidiagonal initial ideal.
+	    Given a permutation or a partial ASM, one may compute its antidiagonal initial ideal via @TO antiDiagInit@.
 	    By [KM05] and [Wei17] or [Knu09], the Fulton generators form a Gröbner basis for any ASM ideal with respect to
 	    any antidiagonal term order.
         Example
@@ -359,7 +360,7 @@ doc ///
 	    (betti res I, betti res inI)
 	Text
 	    By work of Knutson and Miller [KM05], building off of work of Bergeron and Billey [BB93], the prime components of the antidiagonal initial ideal
-	    of a Schubert determinantal ideal for a permutation w are in bijection with the pipe dreams associated
+	    of a Schubert determinantal ideal for a permutation w are in bijection with the pipe dreams (see @TO PipeDream@) associated
 	    to w.  See [BB93] for a detailed description of pipe dreams, there called RC-graphs.
 	Example
 	    # pipeDreams w == # (decompose inI)
