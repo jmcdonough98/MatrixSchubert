@@ -48,6 +48,11 @@ doc ///
         "Investigating ASM varieties"
         "Initial ideals of ASM ideals"
         "Functions for investigating permutations"
+    Subnodes
+    	"Investigating matrix Schubert varieties"
+        "Investigating ASM varieties"
+        "Initial ideals of ASM ideals"
+        "Functions for investigating permutations"
 ///
 ------------------------------
 ------------------------------
@@ -144,7 +149,7 @@ doc ///
 		TO (schubertAdd, List),
 		TO (schubertRegularity, List),
 		TO (schubertCodim, List)
-		}@
+		}@	
 ///
 
 doc ///
@@ -260,6 +265,41 @@ doc ///
 		TO (permSetOfASM, Matrix),
 		TO (toOneLineNotation, Matrix)
 		}@
+    Subnodes
+    	padASM
+    	isPartialASM
+    	partialASMToASM	      	    	       	    
+    	rankTable    	     	      
+    	rotheDiagram    	       	      
+    	augmentedRotheDiagram	    
+    	essentialSet	     	        
+    	augmentedEssentialSet        
+    	schubertDeterminantalIdeal     
+    	fultonGens    	     	        	    
+    	entrywiseMinRankTable	    
+    	entrywiseMaxRankTable	    
+    	schubertDecompose	        
+    	permSetOfASM                  
+    	isASMIdeal    	     	    	 
+    	isASM    	            	 
+    	isASMUnion    	     	    
+    	getASM	     	     	    
+    	isMinRankTable	     	    
+    	rankTableToASM	     	    
+    	rankTableFromMatrix    	    
+    	schubertIntersect	     	    
+    	schubertAdd
+	ASMToMonotoneTriangle        
+    	monotoneTriangleToASM
+	ASMFullList    	      	    
+    	ASMRandomList	    	    
+    	cohenMacaulayASMsList	    
+    	nonCohenMacaulayASMsList
+	isIntersectionOfSchubertDeterminantalIdeals
+	isSchubertCM
+	KPolynomialASM
+	schubertCodim
+	schubertRegularity	    
 ///
 doc ///
     Key 
@@ -361,7 +401,13 @@ doc ///
 		TO (diagRevLexInit, Matrix),
 		TO (pipeDreams, List)
 		}@
-	
+    Subnodes
+    	antiDiagInit   
+	diagLexInitSE   	      	    
+    	diagLexInitNW	    	    
+    	diagRevLexInit	     	    
+    	subwordComplex	  
+	initialIdealsList    	    	 
 ///
 
 doc ///
@@ -460,6 +506,28 @@ doc ///
 		TO (pipeDreams, List),
 		TO (pipeDreamsNonReduced, List),
 		}@
+    Subnodes
+	isPerm	     	     	    
+    	permToMatrix    	       	    
+    	lastDescent    	      	    
+    	firstDescent    	       	    
+    	descentSet    	     	    
+    	permLength    	     	    
+    	inverseOf             	    
+    	longestPerm    	      	    
+    	toOneLineNotation    	    
+    	composePerms    	       	    
+    	isPatternAvoiding    	    
+    	isVexillary    	      	    
+    	avoidsAllPatterns	        
+    	isCartwrightSturmfels	    
+    	isCDG	    	    	    
+    	rajcode	      	      	    
+    	rajIndex        	       	    
+    	grothendieckPolynomial	       	    
+    	schubertPolynomial    	       	    
+    	doubleSchubertPolynomial           
+    	PipeDream    	    	    
 ///
 
 doc ///
