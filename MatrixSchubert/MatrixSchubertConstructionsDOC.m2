@@ -648,7 +648,7 @@ doc ///
         (rankTable, List)
         (rankTable, Matrix)
     Headline
-        compute a table of rank conditions that determines a Schubert determinantal ideal or, more generally, an alternating sign matrix ideal.
+        compute a table of rank conditions that determines te corresponding ASM or matrix Schubert variety
     Usage
         rankTable w
         rankTable A
@@ -698,7 +698,7 @@ doc ///
         (augmentedRotheDiagram, List)
         (augmentedRotheDiagram, Matrix)
     Headline
-        find the Rothe diagram of a partial alternating sign matrix together with the rank table determining the alternating sign matrix variety
+        find the Rothe diagram and rank table for a partial ASM or permutation
     Usage
         augmentedRotheDiagram w
         augmentedRotheDiagram A
@@ -724,7 +724,7 @@ doc ///
         (essentialSet, List)
         (essentialSet, Matrix)
     Headline
-        compute the essential set in the Rothe Diagram for a partial alternating sign matrix or a permutation.
+        compute the essential set in the Rothe Diagram for a partial ASM or a permutation.
     Usage
         essentialSet w
         essentialSet A
@@ -747,7 +747,7 @@ doc ///
         (augmentedEssentialSet, List)
         (augmentedEssentialSet, Matrix)
     Headline
-        find the essential set of a partial alternating sign matrix or a permutation together with the rank conditions determining the alternating sign matrix variety
+        find the essential set and rank conditions for a partial ASM or a permutation
     Usage
         augmentedEssentialSet w
         augmentedEssentialSet A

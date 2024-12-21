@@ -5,7 +5,7 @@ doc ///
         (schubertRegularity, List)
 	(schubertRegularity, Matrix)
     Headline
-        compute the Castelnuovo-Mumford regularity of the quotient by a Schubert determinantal ideal or ASM ideal
+        compute the Castelnuovo-Mumford regularity of the quotient by an ASM ideal
     Usage
         schubertRegularity w
         schubertRegularity A
