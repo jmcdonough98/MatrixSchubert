@@ -43,6 +43,7 @@ doc ///
             @HREF("https://www.math.tamu.edu/directory/graduate.html", "Pooja Joshi")@,
 	    @HREF("https://www-users.cse.umn.edu/~mahrud/", "Mahrud Sayrafi")@, and
             @HREF("https://www.clemson.edu/science/academics/departments/mathstat/about/profiles/arakoto", "Antsa Tantely Fandresena Rakotondrafara")@.
+	    We also thank the anonymous referees for their helpful suggestions.
     SeeAlso 
         "Investigating matrix Schubert varieties"
         "Investigating ASM varieties"
@@ -107,7 +108,7 @@ doc ///
 	    numgens I
 	    numgens (trim I)
 	Text
-	    After creating a Schubert determinantal ideal, the permutation associated to it is stored in its cache table.
+	    After creating a Schubert determinantal ideal, the permutation associated to it is stored in its cache table under the key ASM.
 	    One can also access the permutation matrix directly using @TO getASM@.
 	Example
 	    peek I.cache
