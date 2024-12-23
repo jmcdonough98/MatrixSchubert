@@ -108,8 +108,10 @@ doc ///
 	    numgens (trim I)
 	Text
 	    After creating a Schubert determinantal ideal, the permutation associated to it is stored in its cache table.
+	    One can also access the permutation matrix directly using @TO getASM@.
 	Example
 	    peek I.cache
+	    getASM I
 	Text
 	    This package also contains methods for investigating antidiagonal initial ideals (@TO antiDiagInit@)
 	    of Schubert determinantal ideals and their associated Stanley-Reisner complexes,
