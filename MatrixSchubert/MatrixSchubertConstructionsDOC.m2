@@ -28,9 +28,9 @@ doc ///
 	    {"[KW21] Patricia Klein and Anna Weigandt, ",
 	    HREF("https://arxiv.org/abs/2108.08370", EM "Bumpless pipe dreams encode Gröbner geometry of Schubert polynomials"),
 	    ", arxiv preprint 2108.08370."},
-            {"[PSW21] Oliver Pechenik, David Speyer, and Anna Weigandt, ",
+            {"[PSW24] Oliver Pechenik, David Speyer, and Anna Weigandt, ",
             HREF("https://arxiv.org/abs/2111.10681", EM "Castelnuovo-Mumford regularity of matrix Schubert varieties"),
-            ", arxiv preprint 2111.10681."},
+            ", Selecta Mathematica New Series 30, 66 (2024)."},
             {"[Wei17] Anna Weigandt, ",
             HREF("https://arxiv.org/abs/1708.07236", EM "Prism tableaux for alternating sign matrix varieties"),
             ", arXiv preprint 1708.07236."}
@@ -83,9 +83,9 @@ doc ///
             {"[KM05] Allen Knutson and Ezra Miller, ",
             HREF("https://arxiv.org/abs/math/0110058", EM "Gröbner geometry of Schubert polynomials"),
             ", Annals of Mathematics (2005): 1245-1318."},
-            {"[PSW21] Oliver Pechenik, David Speyer, and Anna Weigandt, ",
+            {"[PSW24] Oliver Pechenik, David Speyer, and Anna Weigandt, ",
             HREF("https://arxiv.org/abs/2111.10681", EM "Castelnuovo-Mumford regularity of matrix Schubert varieties"),
-            ", arxiv preprint 2111.10681."}
+            ", Selecta Mathematica New Series 30, 66 (2024)."}
             }@
 	Text
 	    The general method for creating a
@@ -131,7 +131,7 @@ doc ///
 	    schubertIntersect L
 	Text
 	    Finally, this package contains functions for investigating homological invariants of matrix Schubert
-	    varieties efficiently through combinatorial algorithms produced in [PSW21] via @TO schubertRegularity, TO schubertCodim@.
+	    varieties efficiently through combinatorial algorithms produced in [PSW24] via @TO schubertRegularity, TO schubertCodim@.
 	Example
 	    time schubertRegularity p
 	    time regularity comodule I 
@@ -633,7 +633,7 @@ doc ///
             
             tells us that the Fulton generators of each Schubert determinantal ideal form a Gröbner basis.  For an extension to ASM ideals, see  
 	    
-	    @UL {{"[KW]: Klein and Weigant, Bumpless pipe dreams encode Gröbner geometry of Schubert polynomials (see ", arXiv "2108.08370", ")."},}@
+	    @UL {{"[KW]: Klein and Weigandt, Bumpless pipe dreams encode Gröbner geometry of Schubert polynomials (see ", arXiv "2108.08370", ")."},}@
             
             @UL {{"[Wei]: Weigandt, Prism tableaux for alternating sign matrix varieties (see ", arXiv "1708.07236", ")."},}@
             
@@ -1271,7 +1271,7 @@ doc ///
 	    
 	     @UL {{"[Wei, Section 3.5]: Weigandt, Prism tableaux for alternating sign matrix varieties (see ", arXiv "1708.07236", ")."},}@
 	    
-	     @UL {{"[KW, Lemma 2.6]: Klein and Weigant, Bumpless pipe dreams encode Gröbner geometry of Schubert polynomials (see ", arXiv "2108.08370", ")."},}@
+	     @UL {{"[KW, Lemma 2.6]: Klein and Weigandt, Bumpless pipe dreams encode Gröbner geometry of Schubert polynomials (see ", arXiv "2108.08370", ")."},}@
 	    
 	    The canonical rank table of the sum will be entrywise minimum of the rank tables of the summands.  This function computes the sum of ASM ideals by computing the individual rank tables, using entrywiseMinRankTable to find the entrywise minimum, and then constructing the partial ASM from that rank table.
 	    
