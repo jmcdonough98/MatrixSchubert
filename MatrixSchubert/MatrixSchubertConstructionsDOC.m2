@@ -652,7 +652,7 @@ doc ///
         (rankTable, List)
         (rankTable, Matrix)
     Headline
-        compute a table of rank conditions that determines te corresponding ASM or matrix Schubert variety
+        compute a table of rank conditions that determines the corresponding ASM or matrix Schubert variety
     Usage
         rankTable w
         rankTable A

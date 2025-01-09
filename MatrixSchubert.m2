@@ -2,7 +2,7 @@ newPackage(
     "MatrixSchubert",
     AuxiliaryFiles => true,
     Version => "1.1", 
-    Date => "December 23, 2024",
+    Date => "Jan 8, 2025",
     Keywords => {"Combinatorics", "Commutative Algebra"},
     Authors => {
         {Name => "Ayah Almousa", 
