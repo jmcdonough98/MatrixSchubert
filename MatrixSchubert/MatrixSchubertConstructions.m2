@@ -91,7 +91,7 @@ isPartialASM Matrix := Boolean => (A) -> (
         colPartialSum := accumulate(plus, {0}|(flatten entries(A_{i})));
         if (not(isSubset(sort unique colPartialSum, {0,1}))) then return false;
     );
-    return true
+    true
 )
 
 -------------------------------------
@@ -348,7 +348,7 @@ schubertDeterminantalIdeal Matrix := o -> A -> (
     );
     I = ideal (unique flatten toList fultonGens);
     I.cache.ASM = A;
-    return I;
+    I
 )
 schubertDeterminantalIdeal List := o -> w -> (
     if not(isPerm w) then error("The input must be a partial alternating sign matrix or a permutation.");    
@@ -544,7 +544,7 @@ entrywiseMaxRankTable List := Matrix => L -> (
 monomialRank = method()
 monomialRank (RingElement, ZZ) := ZZ => (mon, maxIdx) -> (
     monIdx := indexOfVariable mon;
-    return (monIdx_0 + 1)*maxIdx - monIdx_1
+    (monIdx_0 + 1)*maxIdx - monIdx_1
 )
 
 -------------------------------------------
@@ -570,16 +570,16 @@ schubertDecompose Ideal := List => I -> (
 	);
     primeDecomp := decompose ideal leadTerm I;
     -- varWeights := (monoid ring I).Options.MonomialOrder#1#1;
-    cycleDecomp := {};
+    cycleDecomp := new MutableList;
     for primeComp in primeDecomp do {
         mons := sort(primeComp_*, mon -> monomialRank(mon, maxIdx));
         perms := apply(mons / indexOfVariable, perm -> toAntiDiagTrans(perm, maxIdx));
         fullPerm := fold(composePerms, perms);
         trimmedPermIdx := select(#fullPerm, i -> fullPerm_{i..#fullPerm-1} != toList(i+1..#fullPerm));        
         trimmedPerm := fullPerm_trimmedPermIdx;
-        cycleDecomp = append(cycleDecomp, trimmedPerm);
+	cycleDecomp#(#cycleDecomp) = trimmedPerm;
     };
-    unique cycleDecomp
+    unique toList cycleDecomp
 )
 
 schubertDecompose Matrix := List => A -> (
@@ -668,7 +668,7 @@ isASM Matrix := Boolean => (M) -> (
     for i from 0 to n-1 do (
 	if ((sum entries(M_{i}) != {1}) or (sum entries((transpose M)_{i}) != {1})) then return false;
     );
-    return true
+    true
 )
 
 -------------------------------------------

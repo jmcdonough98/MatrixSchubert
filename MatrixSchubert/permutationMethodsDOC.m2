@@ -94,7 +94,7 @@ doc ///
         w:List
     Description
         Text
-            Given permutation in 1-line notation, lists the location of its descents, i.e., the least $i$ so that $w_{i+1}<w_i$.
+            Given a permutation in 1-line notation, lists the location of its descents, i.e., the least $i$ so that $w_{i+1}<w_i$.
         Example
             w = {7,2,5,8,1,3,6,4}
             descentSet w
@@ -176,45 +176,29 @@ doc ///
     Key
         toOneLineNotation
         (toOneLineNotation, List, ZZ)
+	(toOneLineNotation, Matrix)
     Headline
-    	rewrites a transposition in 1-line notation
+    	rewrites a transposition or permutation matrix in 1-line notation
     Usage
         toOneLineNotation(perm, maxIdx)
+	toOneLineNotation(A)
     Inputs
     	perm:List
         maxIdx:ZZ
+	A:Matrix
     Outputs
         :List
     Description
     	Text
-    	    Converts a transposition $(a,b)$ to 1-line notation.
+    	    Converts a permutation matrix or list of transpositions $(a,b)$ to 1-line notation.
             {\tt maxIdx} is the $n$ for which to regard {\tt perm} as an 
             element of $S_n$, the symmetric group on $n$ letters.
         Example
             perm = {2,4}
             maxIdx = 5
             toOneLineNotation(perm, maxIdx)
-    SeeAlso
-        (toOneLineNotation, Matrix)
-///
-doc ///
-    Key 
-        (toOneLineNotation, Matrix)
-    Headline 
-        converts a permutation to one line notation
-    Usage
-        toOneLIneNotation(A)
-    Inputs 
-        A:Matrix
-    Outputs
-        :List
-    Description
-        Text
-            Given a permutation matrix, return the corresponding permutation in 1-line notation.
-        Example
+	Example
             toOneLineNotation(matrix{{0,1,0},{1,0,0},{0,0,1}})
-    SeeAlso
-        (toOneLineNotation, List, ZZ)
 ///
 
 doc ///
